@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taskboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="src/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <span class="logo">taskboard<span class="dot">.</span></span>
+    <span class="tagline">your work, simply tracked</span>
+  </header>
+
+  <main>
+    <div class="board" id="board">
+
+      <div class="column" data-status="todo">
+        <div class="col-header">
+          <span class="col-title">To Do</span>
+          <span class="col-count" id="count-todo">0</span>
+        </div>
+        <div class="cards" id="cards-todo"></div>
+      </div>
+
+      <div class="column" data-status="doing">
+        <div class="col-header">
+          <span class="col-title">In Progress</span>
+          <span class="col-count" id="count-doing">0</span>
+        </div>
+        <div class="cards" id="cards-doing"></div>
+      </div>
+
+      <div class="column" data-status="done">
+        <div class="col-header">
+          <span class="col-title">Done</span>
+          <span class="col-count" id="count-done">0</span>
+        </div>
+        <div class="cards" id="cards-done"></div>
+      </div>
+
+    </div>
+
+    <div class="add-task-bar">
+      <input type="text" id="task-input" placeholder="Add a new task…" maxlength="100" />
+      <button id="add-btn">+ Add</button>
+    </div>
+  </main>
+
+  <script src="src/app.js"></script>
+</body>
+</html>
